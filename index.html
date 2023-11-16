@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="styles.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,900&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <script src="script.js"></script>
+      <div class="container">
+         <header>
+            <h1><span class="highlight">$25</span> No Deposit Bonus</h1>
+            <p>Login and play daily to receive FREE MONEY!</p>
+            <button>Sign Up For Bonus</button>
+         </header>
+         <section class="trust-dice">
+            <h2>Why Trust Dice?</h2>
+            <div class="bordered-text">
+               <p class="rating">4.7/5 on TrustPilot and 1000+ reviews!</p>
+               <ul class="benefits">
+                  <li><span>Signup Bonus</span></li>
+                  <li><span>100% Deposit Bonus</span></li>
+                  <li><span>Industry Best Support</span></li>
+               </ul>
+               <ul class="benefits">
+                  <li><span>Instant Payouts</span></li>
+                  <li><span>Free Withdrawals</span></li>
+                  <li><span>8000+ Games</span></li>
+               </ul>
+            </div>
+         </section>
+         <section class="claim">
+            <h2>So How Do You Claim It?</h2>
+            <div class="steps">
+               <!-- step1 -->
+               <div class="step">
+                  <h3>01</h3>
+                  <div class="divider"></div>
+                  <p>Sign Up and get 100 Satoshi signup bonus</p>
+               </div>
+               <!-- step2 -->
+               <div class="step step-2">
+                  <h3>02</h3>
+                  <div class="divider"></div>
+                  <p>Confirm your email via link sent to you</p>
+               </div>
+               <!-- step3 -->
+               <div class="step step-3">
+                  <h3>03</h3>
+                  <div class="divider"></div>
+                  <p>Your first bonus $1-$3 arrives</p>
+               </div>
+               <!-- step4 -->
+               <div class="step step-4">
+                  <h3>04</h3>
+                  <div class="divider"></div>
+                  <p>Play 4 DAYS to receive up to $25. Don't Miss A Day!</p>
+               </div>
+            </div>
+         </section>
+         <div class="button-container">
+            <button>Sign Up For Bonus</button>
+         </div>
+         <footer>
+            <p>*To access Welcome Bonus, click the magical button above to complete your signup(only for newly registered players)</p>
+         </footer>
+      </div>
+      <div id="signupModal" class="modal">
+         <!-- pop up -->
+         <div class="modal-content">
+            <span class="close">&#x2715;</span>
+            <div class="modal-flex-container">
+               <!-- sign up section -->
+               <div class="signup-form-container">
+                  <div class="signup-form">
+                     <h2>Sign Up</h2>
+                     <p style="color:#f7b600;">Signup Bonus available for new members!</p>
+                     <div class="divider-2"></div>
+                     <form id="signupForm">
+                        <input type="username" id="usernameInput" placeholder="Username" required class="input-hover-effect">
+                        <div class="error-message" id="usernameError"></div>
+                        <input type="email" id="emailInput" placeholder="Email" required class="input-hover-effect">
+                        <div class="error-message" id="emailError"></div>
+                        <div class="password-container">
+                          <input type="password" id="passwordInput" placeholder="Password" required class="input-hover-effect">
+                          <img src="https://trustdice.win/public/0ca2aba62e7c01da1ffd2bf2c26d4549.svg" class="password-toggle" id="signupPasswordToggle">
+                      </div>
+                        <div class="error-message" id="passwordError"></div>
+                        <!-- referral section -->
+                        <div class="referral-code-container">
+                          <div class="referral-code-trigger">
+                            Referral Code (Optional)
+                            <img src="https://trustdice.win/public/7dd85e90942d82700401f61776a576ec.svg" class="arrow-symbol">
+                        </div>                        
+                           <input class="referral-code-input input-hover-effect" style="display: none;">
+                          </div>
+                     </form>
+                     <div class="checkbox">
+                        <input type="checkbox" id="termsCheckbox" required>
+                        <label for="termsCheckbox">I agree to the <a href="https://trustdice.win/terms" style="color:#f97170;"><u>Terms & Conditions</u></a>, and confirm that I am at least 18 years old!</label>
+                     </div>
+                     <div class="checkbox">
+                        <input type="checkbox" id="offersCheckbox" checked>
+                        <label for="offersCheckbox">I agree to receive offers & bonus by email</label>
+                     </div>
+                     <button type="submit" id="createAccountButton" class="form-button create-account-btn" disabled>Create Account</button>
+                     <div class="continue-with">
+                        <div class="continue-with-text">Or continue with</div>
+                        <div class="icon-container">
+                           <img src="https://trustdice.win/public/51826961f6c460bfeabd911a5d6d778f.svg" alt="Scatter">
+                           <img src="https://trustdice.win/public/d0d11dcee87669ca482b9dbcf1f331c3.svg" alt="Google">
+                        </div>
+                     </div>
+                     </form>
+                     <div class="login-link-container">
+                        <p class="login-text">Already have an account? <a href="#" class="login-link-button">Login Now</a></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="login-form-container" style="display: none;">
+                  <div class="login-form">
+                     <h2>Login</h2>
+                     <div class="divider-2"></div>
+                     <form id="loginForm">
+                        <input type="username" id="loginUsernameEmail" placeholder="Username or Email" required class="input-hover-effect">
+                        <div class="error-message" id="loginUsernameError"></div>
+                        <div class="password-container">
+                          <input type="password" id="loginPassword" placeholder="Password" required class="input-hover-effect">
+                          <img src="https://trustdice.win/public/0ca2aba62e7c01da1ffd2bf2c26d4549.svg" class="password-toggle" id="loginPasswordToggle">
+                      </div>
+                        <div class="error-message" id="loginPasswordError"></div>
+                        <a href="#" class="forget-password-link">Forget Password?</a>
+                        <button type="submit" id="loginButton" class="form-button">Login</button>
+                        <div class="continue-with">
+                           <div class="continue-with-text">Or continue with</div>
+                           <div class="icon-container">
+                              <img src="https://trustdice.win/public/51826961f6c460bfeabd911a5d6d778f.svg" alt="Scatter">
+                              <img src="https://trustdice.win/public/d0d11dcee87669ca482b9dbcf1f331c3.svg" alt="Google">
+                           </div>
+                        </div>
+                        <div class="account-creation-link-container">
+                           <p class="account-creation-text">
+                              Don't have an account? Signup Bonus available for new accounts!
+                              <a href="#" class="create-account-link">Create an Account</a>
+                           </p>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <!-- password reset section -->
+               <div class="reset-password-container" style="display: none;">
+                  <h2>Reset password</h2>
+                  <div class="divider-2"></div>
+                  <p>Input your email address and click the request button, we will send you the link to reset your password.</p>
+                  <form id="resetPasswordForm">
+                     <input type="email" id="resetEmailInput" placeholder="Email" required class="input-hover-effect">
+                     <div class="error-message" id="resetEmailError"></div>
+                     <button type="submit" id="resetButton" class="form-button">Reset password</button>
+                  </form>
+                  <a href="#" class="back-to-login-link">Back to login</a>
+               </div>
+               <!-- right side -->
+               <div class="promo-info-container">
+                  <img src="https://trustdice.win/public/aa4a6aba5614b151f2eacae5d919e067.svg" class="trustpilot">
+                  <img src="https://trustdice.win/public/c7697c7c2dfb7dc9bebe4c17ccec1263.svg" class="trustdice-logo">
+                  <div class="players-worldwide">
+                     Players Worldwide：<span class="player-count"></span>
+                  </div>
+                  <div class="features-wrapper">
+                     <!-- 1 -->
+                     <div class="feature">
+                        <img src="https://trustdice.win/public/c9db2556215c5f82619bc3e7d7efcbfd.svg" class="feature-icon">
+                        <div class="feature-text">
+                           <p class="feature-text-first">99.4%</p>
+                           <p class="feature-text-second">Payouts Approved Instantly</p>
+                        </div>
+                     </div>
+                     <!-- 2 -->
+                     <div class="feature">
+                        <img src="https://trustdice.win/public/e61ed7dcef657577288f9c54d4e9c0bb.svg" class="feature-icon">
+                        <div class="feature-text">
+                           <p class="feature-text-first">0</p>
+                           <p class="feature-text-second">Withdrawal Fees</p>
+                        </div>
+                     </div>
+                     <!-- 3 -->
+                     <div class="feature">
+                        <img src="https://trustdice.win/public/af57e40b90f9dc4a020219b91b7df8d7.svg" class="feature-icon">
+                        <div class="feature-text">
+                           <p class="feature-text-first">2 Mins</p>
+                           <p class="feature-text-second">Avg. Response Time</p>
+                        </div>
+                     </div>
+                     <!-- 4 -->
+                     <div class="feature">
+                        <img src="https://trustdice.win/public/2df976db19a07e6322b037747eccca76.svg" class="feature-icon">
+                        <div class="feature-text">
+                           <p class="feature-text-first">6000+</p>
+                           <p class="feature-text-second">Games Available</p>
+                        </div>
+                     </div>
+                     <!-- 5 -->
+                     <div class="feature">
+                        <img src="https://trustdice.win/public/94f2a20efeb9f85daa326ab5a2d37c61.svg" class="feature-icon">
+                        <div class="feature-text">
+                           <p class="feature-text-first">100% up to 3 BTC</p>
+                           <p class="feature-text-second">Deposit Bonus</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- td king image at the bottom right -->
+               <img src="https://trustdice.win/public/image/character-391871.png" class="trustdice-king">
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+   </body>
+</html>

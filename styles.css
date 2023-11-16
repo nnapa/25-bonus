@@ -1,0 +1,669 @@
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  background-color: #3c0654;
+  color: white;
+}
+
+img {
+  pointer-events: none;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+header {
+  padding: 100px 0;
+}
+
+.highlight {
+  color: #f97170;
+}
+
+header h1 {
+  font-size: 75px;
+  margin-top: 10px;
+}
+
+header p {
+  font-size: 25px;
+  font-weight: 200;
+  margin-bottom: 22px;
+}
+
+button {
+  background-color: #f97170;
+  border: none;
+  padding: 13px 20px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.bordered-text {
+  border: 1px solid #7e17af;
+  border-radius: 10px;
+  padding: 17px;
+  padding-left: 200px;
+  padding-right: 200px;
+  color: white;
+  font-size: 16px;
+  max-width: 1091px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.bordered-text .rating {
+  margin-bottom: 15px;
+  font-weight: 600px;
+  font-size: 20px;
+}
+
+.benefits {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits li {
+  margin-bottom: 5px;
+  position: relative;
+  color: #d8d8d8;
+}
+
+.benefits li span {
+  position: relative;
+  display: block;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.benefits li::before {
+  content: "•";
+  color: #f97170;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-100%);
+  font-size: 35px;
+}
+
+.trust-dice {
+  margin: 40px 0;
+}
+
+.trust-dice h2 {
+  margin-top: -50px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.trust-dice .rating {
+  margin-bottom: 35px;
+  color: #d8d8d8;
+}
+
+.trust-dice .benefits {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trust-dice .benefits li {
+  margin: 0 15px;
+  flex: 1px;
+}
+
+.claim {
+  margin-bottom: 40px;
+}
+
+.claim h2 {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 45px;
+}
+
+.steps {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 50px;
+  margin-bottom: 70px;
+}
+
+.step {
+  flex: 1 1 0;
+}
+
+.step h3 {
+  color: #fff;
+  font-size: 50px;
+  line-height: normal;
+  text-align: left;
+  display: block;
+
+  margin-bottom: -20px;
+}
+
+.step p {
+  font-size: 16px;
+  margin-top: 35px;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.divider {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  height: 2px;
+  background-image: linear-gradient(to right, #d7f380 0%, #ec7f84 25%, #29a4c4 25%, #f5037a 50%, #9154fe 50%, #de33fd 75%, #3aded4 75%, #f36f1b 100%);
+  z-index: 1;
+}
+
+.button-container {
+  padding: 20px;
+}
+
+footer {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.modal.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("https://trustdice.win/public/image/auth-bg-a0200e.png");
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  border: none;
+  width: 800px;
+  height: auto;
+  min-height: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  display: flex;
+  overflow-y: auto;
+  overflow: visible;
+  font-weight: 200;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.modal-flex-container {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.form-button {
+  background-color: #f97170;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  transition: background-color 0.5s;
+}
+
+.form-button:not(:disabled):hover {
+  background-color: #fb9c9b;
+}
+
+.create-account-btn:disabled {
+  background-color: #5e177d;
+  color: #9f8ab0;
+  cursor: not-allowed;
+}
+
+.signup-form-container,
+.login-form-container,
+.reset-password-container {
+  margin: 9px;
+  width: calc(50% - 11px);
+  background-color: #540c74;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-radius: 10px;
+  height: auto;
+  text-align: left;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 12px;
+  display: none;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.close {
+  color: #ffffff;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.close:hover,
+.close:focus {
+  color: #ceb1da;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.signup-form h2 {
+  text-align: left;
+}
+
+.signup-form p {
+  text-align: left;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.divider-2 {
+  height: 1px;
+  background-color: #6b108c;
+  margin: 8px 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.input-hover-effect {
+  box-shadow: inset 0 0 0 2px transparent;
+  transition: box-shadow 0.3s ease;
+  outline: none;
+}
+
+.input-hover-effect:hover,
+.input-hover-effect:focus {
+  box-shadow: inset 0 0 0 2px #f97170;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  pointer-events: auto;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+.signup-form input,
+.login-form input,
+.reset-password-container input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 40px;
+  margin: 13px auto;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: #6b108c;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px 20px;
+}
+
+.signup-form input[type="username"],
+.login-form input[type="username"] {
+  background-image: url("https://trustdice.win/public/84d8370fab4dc9a4acab8c3f9177e982.svg");
+}
+
+.signup-form input[type="email"],
+.reset-password-container input[type="email"] {
+  background-image: url("https://trustdice.win/public/8a3a89ffa83ac2810668527135baf95c.svg");
+}
+
+.signup-form input[type="password"],
+.login-form input[type="password"] {
+  background-image: url("https://trustdice.win/public/b508e3ae25e1a601caa922a34dea1647.svg");
+}
+
+.signup-form input[type="text"], /* password toggle visible */
+.login-form input[type="text"] {
+  background-image: url("https://trustdice.win/public/b508e3ae25e1a601caa922a34dea1647.svg");
+}
+
+.signup-form input::placeholder,
+.signup-form select::placeholder,
+.login-form input::placeholder,
+.reset-password-container input::placeholder {
+  color: #c7a6d4;
+  opacity: 0.8;
+  font-size: 14px;
+  font-weight: 100px;
+}
+
+.referral-code-container .referral-code-trigger {
+  cursor: pointer;
+  color: #c5aed1;
+  font-size: 12px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.referral-code-trigger .arrow-symbol {
+  display: inline-block;
+  width: 12px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+  filter: opacity(60%);
+}
+
+.referral-code-container.active .arrow-symbol {
+  transform: rotate(0deg);
+}
+
+.referral-code-container input.referral-code-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 9px 10px;
+  margin: 13px 0;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  color: #898989;
+  border: none;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  color: #f1e2fa;
+}
+
+.checkbox input[type="checkbox"] {
+  margin: 0;
+  width: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.checkbox label {
+  font-size: 12px;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.checkbox label a {
+  color: #f97170;
+  text-decoration: none;
+}
+
+.continue-with {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.continue-with-text {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.continue-with-text::before,
+.continue-with-text::after {
+  content: "";
+  height: 1px;
+  background-color: #6b108c;
+  position: absolute;
+  top: 50%;
+  width: 110px;
+}
+
+.continue-with-text::before {
+  left: -130px;
+}
+
+.continue-with-text::after {
+  right: -130px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon-container img {
+  height: 32px;
+  margin: 6px;
+  width: auto;
+  cursor: pointer;
+}
+
+.login-link-container .login-text {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 200;
+  margin-top: 18px;
+  display: block;
+  width: 100%;
+}
+
+.login-link-container .login-link-button {
+  color: #f97170;
+  text-decoration: none;
+}
+
+.login-link-container .login-link-button:hover {
+  text-decoration: underline;
+}
+
+.login-form h2 {
+  text-align: left;
+  color: white;
+}
+
+.account-creation-link-container .account-creation-text {
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+}
+
+.account-creation-link-container .create-account-link {
+  color: #f97170;
+  text-decoration: none;
+}
+
+.account-creation-link-container .create-account-link:hover {
+  text-decoration: underline;
+}
+
+.forget-password-link {
+  color: #f97170;
+  font-size: 12px;
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+  margin-bottom: 130px;
+  text-decoration: none;
+}
+
+.forget-password-link:hover {
+  text-decoration: underline;
+}
+
+.reset-password-container h2 {
+  color: white;
+  text-align: left;
+}
+
+.reset-password-container p {
+  color: white;
+  text-align: left;
+  font-size: 14px;
+  margin-top: 9px;
+  margin-bottom: 20px;
+  padding: 0 5px;
+}
+
+.back-to-login-link {
+  color: #f97170;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.back-to-login-link:hover {
+  text-decoration: underline;
+}
+
+.trustdice-king {
+  position: absolute;
+  bottom: 0px;
+  right: -100px;
+  width: 370px;
+  height: auto;
+  z-index: 1;
+}
+
+.promo-info-container {
+  position: relative;
+}
+
+.players-worldwide {
+  position: absolute;
+  bottom: 18px;
+  right: -85px;
+  color: white;
+  font-size: 14px;
+  z-index: 2;
+}
+
+.players-worldwide .player-count {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.trustpilot {
+  width: auto;
+  height: 102px;
+  position: absolute;
+  left: 8%;
+  top: 78%;
+  z-index: 5;
+}
+
+.trustdice-logo {
+  width: 140px;
+  height: auto;
+  position: absolute;
+  left: 25px;
+  top: 33px;
+  z-index: 5;
+}
+
+.features-wrapper {
+  margin-top: 90px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 17px;
+  margin-left: 23px;
+}
+
+.feature-icon {
+  width: auto;
+  height: 41px;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 15px;
+  font-weight: 200px;
+  z-index: 2;
+}
+
+.feature-text-first {
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+}
+
+.feature-text-second {
+  font-size: 14px;
+  color: white;
+}
