@@ -289,15 +289,16 @@ footer {
   position: absolute;
   right: 15px;
   top: 5px;
-  font-size: 30px;
+  font-size: 27px;
   font-weight: lighter;
 }
 
-.close:hover,
-.close:focus {
-  color: #ceb1da;
-  text-decoration: none;
+.close:hover {
   cursor: pointer;
+}
+
+.close-clicked {
+  color: #ceb1da;
 }
 
 .signup-form h2 {

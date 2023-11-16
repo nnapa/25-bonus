@@ -1,2 +1,1 @@
-# 25-bonus
- 
+# $25 Bonus Static README

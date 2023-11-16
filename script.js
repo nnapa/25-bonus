@@ -70,6 +70,18 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.overflow = "";
   }
 
+  span.addEventListener("mousedown", function () {
+    this.classList.add("close-clicked");
+  });
+
+  span.addEventListener("mouseup", function () {
+    this.classList.remove("close-clicked");
+  });
+
+  span.addEventListener("mouseleave", function () {
+    this.classList.remove("close-clicked");
+  });
+
   btns.forEach(function (button) {
     button.addEventListener("click", function () {
       modal.style.display = "block";
@@ -144,8 +156,8 @@ document.addEventListener("DOMContentLoaded", function () {
   addBlurListener(document.getElementById("usernameInput"), "usernameError", isValidUsername, "Username must be 3-11 characters long, and contains only letters and numbers.");
   addBlurListener(document.getElementById("emailInput"), "emailError", isValidEmail, "Please enter a valid email address.");
   addBlurListener(document.getElementById("passwordInput"), "passwordError", isValidPassword, "Please make it at least 6 characters.");
-  addBlurListener(document.getElementById("loginUsernameEmail"), "loginUsernameError", isValidEmail, "Please enter your username or email.");
-  addBlurListener(document.getElementById("loginPassword"), "loginPasswordError", isValidPassword, "Please enter your password.");
+  addBlurListener(document.getElementById("loginUsernameEmail"), "loginUsernameError", isValidEmail, "Username must be 3-11 characters long, and contains only letters and numbers.");
+  addBlurListener(document.getElementById("loginPassword"), "loginPasswordError", isValidPassword, "Please make it at least 6 characters.");
   addBlurListener(document.getElementById("resetEmailInput"), "resetEmailError", isValidEmail, "Please enter a valid email address.");
 
   createAccountButton.addEventListener("click", function (event) {
