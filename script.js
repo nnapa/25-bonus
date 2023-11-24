@@ -222,4 +222,29 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  document.querySelectorAll(".input-container").forEach((container) => {
+    const clearButton = document.createElement("span");
+    clearButton.innerHTML = "&#x2715;";
+    clearButton.classList.add("clear-button");
+    container.appendChild(clearButton);
+    const input = container.querySelector("input");
+
+    function toggleClearButton() {
+      if (input.value) {
+        clearButton.classList.add("visible");
+      } else {
+        clearButton.classList.remove("visible");
+      }
+    }
+    input.addEventListener("keyup", toggleClearButton);
+
+    clearButton.addEventListener("click", () => {
+      input.value = "";
+      toggleClearButton();
+      input.focus();
+    });
+
+    toggleClearButton();
+  });
 });

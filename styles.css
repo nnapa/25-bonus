@@ -4,15 +4,19 @@ h2,
 h3,
 p {
   margin: 0;
-  padding: 0;
   text-align: center;
+  font-smooth: always;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  background-color: #3c0654;
   color: white;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  background-color: #3c0654;
+  display: block;
+  box-sizing: inherit;
 }
 
 img {
@@ -32,43 +36,88 @@ header {
 }
 
 header h1 {
-  font-size: 75px;
+  font-size: 36px;
+  font-weight: 500;
   margin-top: 10px;
 }
 
+@media (min-width: 960px) {
+  header h1 {
+    font-size: 54px;
+  }
+}
+
+@media (min-width: 1600px) {
+  header h1 {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 599.95px) {
+  header h1 {
+    font-size: 25px;
+  }
+}
+
 header p {
-  font-size: 25px;
-  font-weight: 200;
-  margin-bottom: 22px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+@media (max-width: 959px) {
+  header p {
+    font-size: 13px;
+  }
 }
 
 button {
   background-color: #f97170;
+  margin-top: 20px;
   border: none;
-  padding: 13px 20px;
+  padding: 0 20px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
-  font-weight: 600;
+  min-width: 90px;
+  font-weight: 500;
+  height: 40px;
   color: #ffffff;
-  border-radius: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
 .bordered-text {
-  border: 1px solid #7e17af;
+  border: 1px solid #7e04af;
+  width: 60%;
   border-radius: 10px;
   padding: 17px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 10%;
+  padding-right: 10%;
   color: white;
-  font-size: 16px;
-  max-width: 1091px;
   box-sizing: border-box;
   margin: 0 auto;
 }
 
+@media (max-width: 1279.95px) {
+  .bordered-text {
+    width: 80%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 959.95px) {
+  .bordered-text {
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
 .bordered-text .rating {
   margin-bottom: 15px;
-  font-weight: 600px;
+  font-weight: 400px;
   font-size: 20px;
 }
 
@@ -80,7 +129,6 @@ button {
 .benefits li {
   margin-bottom: 5px;
   position: relative;
-  color: #d8d8d8;
 }
 
 .benefits li span {
@@ -105,27 +153,58 @@ button {
 }
 
 .trust-dice h2 {
+  font-size: 14px;
   margin-top: -50px;
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media (min-width: 960px) {
+  .trust-dice h2 {
+    font-size: 24px;
+  }
 }
 
 .trust-dice .rating {
   margin-bottom: 35px;
-  color: #d8d8d8;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+  .trust-dice .rating {
+    font-size: 18px;
+  }
 }
 
 .trust-dice .benefits {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 24px;
+  margin-top: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+@media (min-width: 960px) {
+  .trust-dice .benefits {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 959.95px) {
+  .trust-dice .benefits {
+    font-size: 12px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .trust-dice .benefits li {
-  margin: 0 15px;
-  flex: 1px;
+  margin: 0 auto;
+  display: block;
+  white-space: nowrap;
 }
 
 .claim {
@@ -134,8 +213,16 @@ button {
 
 .claim h2 {
   text-align: center;
+  font-size: 14px;
+  font-weight: 500;
   margin-top: 70px;
   margin-bottom: 45px;
+}
+
+@media (min-width: 960px) {
+  .claim h2 {
+    font-size: 24px;
+  }
 }
 
 .steps {
@@ -154,19 +241,31 @@ button {
 .step h3 {
   color: #fff;
   font-size: 50px;
+  font-weight: 500;
   line-height: normal;
   text-align: left;
   display: block;
-
   margin-bottom: -20px;
 }
 
+@media (max-width: 959.95px) {
+  .step h3 {
+    font-size: 40px;
+  }
+}
 .step p {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 200;
   margin-top: 35px;
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+@media (min-width: 600px) {
+  .step p {
+    font-size: 16px;
+  }
 }
 
 .divider {
@@ -184,8 +283,15 @@ button {
 
 footer {
   font-size: 14px;
+  font-weight: 200;
   color: #fff;
   margin-bottom: 50px;
+}
+
+@media (max-width: 959.95px) {
+  footer {
+    font-size: 12px;
+  }
 }
 
 .modal {
@@ -282,6 +388,31 @@ footer {
   display: none;
   text-align: left;
   margin-bottom: 20px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+}
+
+.input-container input {
+  width: 100%;
+}
+
+.clear-button {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  color: black;
+}
+
+.clear-button.visible {
+  opacity: 0.2;
+  pointer-events: auto;
 }
 
 .close {
